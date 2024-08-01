@@ -164,10 +164,10 @@ Lets start from second option. Then in code:
 
 ```rust
 if let Some(tx_existing) = state_lock.remove( & unique_id) {
-tx_existing.send(()).unwrap_or_default();
-return Ok(warp::reply::with_status("Synced", warp::http::StatusCode::OK));
+    tx_existing.send(()).unwrap_or_default();
+    return Ok(warp::reply::with_status("Synced", warp::http::StatusCode::OK));
 } else {
-state_lock.insert(unique_id.clone(), tx);
+    state_lock.insert(unique_id.clone(), tx);
 }
 ```
 
