@@ -27,3 +27,7 @@ In second and third console experiment with http requests like:
 ```
 http POST http://127.0.0.1:3030/wait-for-second-party/test-id
 ```
+
+You should be able to reproduce steps from demo presented below
+
+![./docs/demo.gif](./docs/demo.gif)
