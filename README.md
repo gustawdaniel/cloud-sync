@@ -62,6 +62,12 @@ We decided to use `tokio` and `warp`. Tokio provides async runtime environment.
 Warp is library allowing to set up web server build on top of tokio.
 It is equivalent of express from node, or flask from python.
 
+General schema of program is presented below. On the diagram we are considering 2 subsequent 
+requests in time shorter than timeout having the same unique id in path. Exact meaning of `tx` and `rx`
+and structure of state is presented with code.
+
+![./docs/diagram.png](./docs/diagram.png)
+
 We're starting from setting state of app. It will be a map with keys
 being strings from user, and values being senders from tokio oneshot channel.
 
